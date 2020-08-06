@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register">
+
+    <LinearLayout
+        android:layout_width="431dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Nama"
+            android:textSize="30dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Email"
+            android:textSize="30dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:hint="Password"
+            android:textSize="30dp"
+
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="No Hp"
+            android:textSize="30dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+
+            android:layout_width="226dp"
+            android:layout_height="74dp"
+            android:background="@drawable/background"
+            android:text="Daftar"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="40dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
