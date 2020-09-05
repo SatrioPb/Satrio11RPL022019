@@ -62,6 +62,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        dft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Daftar akun ", Toast.LENGTH_SHORT).show();
+                Intent dtr = new Intent(MainActivity.this, register.class);
+                startActivity(dtr);
+                finish();
+            }
+        });
+
+
+
 
     }
 }

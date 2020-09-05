@@ -13,16 +13,19 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/mama"
             android:layout_width="match_parent"
             android:hint="Nama"
             android:textSize="30dp"
             android:layout_height="wrap_content"/>
         <EditText
+            android:id="@+id/emil"
             android:layout_width="match_parent"
             android:hint="Email"
             android:textSize="30dp"
             android:layout_height="wrap_content"/>
         <EditText
+            android:id="@+id/pasw"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:hint="Password"
@@ -30,20 +33,29 @@
 
             android:layout_height="wrap_content"/>
         <EditText
+            android:id="@+id/hp"
             android:layout_width="match_parent"
             android:hint="No Hp"
             android:textSize="30dp"
             android:layout_height="wrap_content"/>
 
         <Button
-
+            android:id="@+id/dft"
             android:layout_width="226dp"
             android:layout_height="74dp"
             android:background="@drawable/background"
             android:text="Daftar"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="40dp"/>
 
+            android:layout_marginTop="40dp"/>
+        <Button
+            android:id="@+id/bck"
+            android:text="kembali"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:background="@drawable/background"/>
     </LinearLayout>
 
 
