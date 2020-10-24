@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView android:layout_margin="20dp"
     android:id="@+id/cardku"
+    app:cardCornerRadius="30dp"
     card_view:cardUseCompatPadding="true"
     app:cardElevation="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,6 +22,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:layout_marginTop="3dp"
                 android:id="@+id/ivprofile"
                 android:layout_width="59dp"
                 android:layout_height="68dp"
@@ -34,6 +36,9 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#FF0000"
+                    android:layout_marginTop="3dp"
                     android:id="@+id/tvname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

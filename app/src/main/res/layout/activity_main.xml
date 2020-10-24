@@ -61,7 +61,7 @@
         android:layout_width="219dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:text="Login untuk lihat akun kamu yuk" />
+        android:text="silahkan login terlebih dahulu" />
 
     <TextView
         android:id="@+id/dft"

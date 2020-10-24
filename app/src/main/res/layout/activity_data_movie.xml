@@ -8,7 +8,9 @@
     android:layout_height="match_parent"
     tools:context=".DataMovie">
 
+
     <TextView
+        android:textColor="#FF0000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Judul"
@@ -16,24 +18,47 @@
         android:textSize="30dp"
         android:layout_gravity="center"/>
 
-    <ImageView
-        android:id="@+id/imgmovie"
-        android:layout_width="274dp"
-        android:layout_height="280dp"
-        android:src="@drawable/kosong"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp" />
+    <androidx.cardview.widget.CardView
 
-    <TextView
-        android:layout_margin="10dp"
-
-        android:id="@+id/moviedesc"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Deskripsi"
-        android:textSize="20dp" />
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/imgmovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/kosong" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardElevation="10dp">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="	#000000"
+            android:id="@+id/moviedesc"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Deskripsi"
+            android:textSize="20dp" />
+    </androidx.cardview.widget.CardView>
+
 
     <Button
         android:layout_marginTop="30dp"

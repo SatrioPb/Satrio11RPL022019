@@ -24,6 +24,12 @@ public class menu extends AppCompatActivity {
             }
         });
         menu2 = (CardView)findViewById(R.id.menu2);
+        menu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ListDataFavourite.class));
+            }
+        });
 
     }
 }

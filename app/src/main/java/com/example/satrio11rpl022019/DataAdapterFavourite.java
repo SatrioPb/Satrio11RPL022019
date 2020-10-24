@@ -17,24 +17,33 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
-import java.util.ArrayList;
+import java.util.List;
+
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 public class DataAdapterFavourite extends RecyclerView.Adapter<DataAdapterFavourite.DatakuViewHolder> {
-    private ArrayList<ModelMovieRealm> dataList;
+    private List<ModelMovieRealm> dataList;
     private Callback callback;
     View viewku;
     int posku;
+    Realm realm;
+    RealmHelper realmHelper;
 
     interface Callback {
         void onClick(int position);
         void test();
+
     }
 
 
-    public DataAdapterFavourite(ArrayList<ModelMovieRealm> dataList, Callback callback) {
+    public DataAdapterFavourite(List<ModelMovieRealm> dataList, Callback callback) {
         this.callback = callback;
         this.dataList = dataList;
         Log.d("makanan", "MahasiswaAdapter: "+dataList.size()+"");
+        RealmConfiguration configuration = new RealmConfiguration.Builder().build();
+        realm = Realm.getInstance(configuration);
+        realmHelper = new RealmHelper(realm);
     }
 
     @Override
