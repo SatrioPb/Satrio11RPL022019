@@ -1,5 +1,7 @@
 package com.example.satrio11rpl022019;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
@@ -117,8 +119,28 @@ public class DataAdapterFavourite extends RecyclerView.Adapter<DataAdapterFavour
 
                 case 2:
                     //Do stuff
+                    DialogInterface.OnClickListener dialog = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch (which){
+                                case DialogInterface.BUTTON_POSITIVE:
+                                    realmHelper.delete(dataList.get(posku).getId());
+                                    notifyDataSetChanged();
+                                    break;
 
+                                    case DialogInterface.BUTTON_NEGATIVE:
+                                        break;
+
+                            }
+                        }
+                    };
+                    AlertDialog.Builder builder = new AlertDialog.Builder(viewku.getContext());
+                    builder.setMessage("Apa anda yakin?").setPositiveButton("yes",dialog)
+                            .setNegativeButton("No",dialog).show();
                     break;
+
+
+
             }
             return true;
         }
