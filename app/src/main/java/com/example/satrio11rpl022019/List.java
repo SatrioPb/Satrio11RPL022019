@@ -1,5 +1,5 @@
 package com.example.satrio11rpl022019;
-
+import android.app.ProgressDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,18 +25,23 @@ import java.util.ArrayList;
 
 public class List extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-    private DataAdapter adapter;
-    private ArrayList<Model> DataArrayList;
-    private ImageView tambah_data;
+     RecyclerView recyclerView;
+     DataAdapter adapter;
+     ArrayList<Model> DataArrayList;
+     ImageView tambah_data;
+    ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         recyclerView = (RecyclerView) findViewById(R.id.rvdata);
+        dialog = new ProgressDialog(List.this);
         //addData();
-        addDataOnline();
+
+        dialog.setMessage("Sedang memproses data");
+        dialog.show();
+
     }
 
     void addData() {
@@ -120,8 +125,14 @@ public class List extends AppCompatActivity {
                             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(List.this);
                             recyclerView.setLayoutManager(layoutManager);
                             recyclerView.setAdapter(adapter);
+                            if (dialog.isShowing()) {
+                                dialog.dismiss();
+                            }
                         } catch ( JSONException e) {
                             e.printStackTrace();
+                            if (dialog.isShowing()) {
+                                dialog.dismiss();
+                            }
                         }
                     }
 
